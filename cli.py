@@ -1,5 +1,5 @@
 import argparse
-from logintel.runner import run
+from controlPlane.runner import run
 
 def main():
     parser = argparse.ArgumentParser(description="LogIntel CLI - Monitor and Analyze AWS Logs")

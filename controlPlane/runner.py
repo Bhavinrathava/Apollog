@@ -1,8 +1,8 @@
 import time
-from logintel.config import ConfigLoader
-from logintel.poller import CloudWatchPoller
-from logintel.summarizer import LogSummarizer
-from logintel.notifier import SNSNotifier
+from controlPlane.config import ConfigLoader
+from controlPlane.logIngestionEngine.poller import CloudWatchPoller
+from controlPlane.logProcessingEngine.summarizer import LogSummarizer
+from controlPlane.notificationEngine.notifier import SNSNotifier
 
 def main():
     config = ConfigLoader('config.yaml')
