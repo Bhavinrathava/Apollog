@@ -1,6 +1,25 @@
-### example config.yaml
-log_groups:
-  - "/aws/lambda/my-test-function"
-  - "/aws/stepfunctions/my-step-fn"
-poll_interval: 60
-sns_topic_arn: "arn:aws:sns:us-west-2:123456789012:MyAlertTopic"
+
+
+# Services Defined 
+services:
+  - serviceName: "DummyAPIGateway"
+    namespace: "/aws/APIGateway"
+    region: "us-west-2"
+  - serviceName: "DummyStepFunctions"
+    namespace: "/aws/StepFunctions"
+    region: "us-west-2"
+  - serviceName: "DummyFargate"
+    namespace: "/aws/Fargate"
+    region: "us-west-2"
+  - serviceName: "DummyLambda"
+    namespace: "/aws/Lambda"
+    region: "us-west-2"
+
+architecture: 
+  logTableName: "Apollog-TimeBlock-Logs"
+  summaryTableName: "Apollog-event-summary"
+  tableRegion: "us-west-2"
+
+cluster_name: "Apollog-cluster"
+
+stack_name: "Apollog-dev-Monitoring-Stack"
